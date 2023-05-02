@@ -1,0 +1,42 @@
+.wrapper_banner {
+    width: 100%;
+    height: 280px;
+    cursor: pointer;
+}
+
+.wrapper_bannerItem {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper_bannerContent {
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.banner_description {
+    width: 70%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.banner_description > * {
+    margin-left: 30px;
+}
+
+.banner_img {
+    width: 30%;
+    height: 100%;
+    background-color: black;
+}
+
+.banner_img > img {
+    width: 100%;
+    height: 100%;
+}
