@@ -1,8 +1,7 @@
 import "./css/App.css";
-import Axios from "axios";
-import { useState } from "react";
-import Banner from "./components/common/banner/Banner";
-import NavTop from "./components/common/header/NavTop";
+import Banner from "components/common/banner/Banner";
+import NavTop from "components/common/header/NavTop";
+import Category from "components/category/Category";
 
 function App() {
     // const test = () => {
@@ -17,6 +16,8 @@ function App() {
         <div className="App">
             <NavTop />
             <Banner />
+            {/* ToDoList - 대분류(자치구), 중분류(ex.도봉구) 컴포넌트 분리 */}
+            <Category />
         </div>
     );
 }
