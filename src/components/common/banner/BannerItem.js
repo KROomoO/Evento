@@ -1,5 +1,4 @@
 import { Paper } from "@mui/material";
-import "css/Banner.css";
 
 function BannerItem({ title, sub, imgSrc, bannerLink, bannerColor }) {
     const handleBannerLink = () => {
