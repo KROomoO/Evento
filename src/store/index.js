@@ -1,10 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import selectListSlice from "./reducer/selectListSlice";
+import selectResultListSlice from "./reducer/selectResultListSlice";
 
-const store = configureStore({
-    reducer: {
-        selectedList: selectListSlice.reducer,
-    },
+const reducer = combineReducers({
+    selectResultList: selectResultListSlice.reducer,
+    selectedList: selectListSlice.reducer,
 });
+
+const store = configureStore({ reducer });
 
 export default store;
