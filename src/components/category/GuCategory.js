@@ -25,23 +25,22 @@ function GuCategory({ gulist }) {
     useEffect(() => {
         if (selectResultList.length !== 0) {
             console.log(selectResultList);
+        } else {
+            // 강서구 무료 행사 없음 이것도 리스트에 결과 없다고 따로 처리 해줘야함(월별 선택 시 해당 월 and 지역구 or 무료 행사가 없을 경우와 동일하게)
+            console.log("없음");
         }
     }, [selectResultList]);
 
     // load selected list
     useEffect(() => {
-        Axios.post("/api/list/guname", {
-            selectGuname: selectedListGuname,
-            checkedFree: selectedListFree,
+        Axios.get("/api/list/guname", {
+            params: {
+                selectGuname: selectedListGuname,
+                checkedFree: selectedListFree,
+            },
         })
             .then((response) => {
                 dispatch(setResult(response.data));
-
-                // console.log(
-                //     response.data && response.data.length !== 0
-                //         ? response.data
-                //         : "없음"
-                // );
             })
             .catch((err) => {
                 console.error(err);

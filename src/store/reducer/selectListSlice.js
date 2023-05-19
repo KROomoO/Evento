@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     guname: "",
-    free: false,
+    free: 0,
 };
 
 const selectListSlice = createSlice({

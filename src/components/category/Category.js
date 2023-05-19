@@ -14,7 +14,7 @@ function Category() {
 
     // load guname list
     useEffect(() => {
-        Axios.post("/api/list")
+        Axios.get("/api/list")
             .then((response) => {
                 setGulist(response.data);
             })
@@ -24,7 +24,11 @@ function Category() {
     }, []);
 
     const handleCheckedFree = (event) => {
-        dispatch(checkedFree(event.target.checked));
+        if (event.target.checked) {
+            dispatch(checkedFree(1));
+        } else {
+            dispatch(checkedFree(0));
+        }
     };
 
     return (
