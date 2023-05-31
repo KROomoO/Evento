@@ -2,6 +2,7 @@ import "./css/App.css";
 import Banner from "components/common/banner/Banner";
 import NavTop from "components/common/header/NavTop";
 import Category from "components/category/Category";
+import List from "components/list/List";
 
 function App() {
     return (
@@ -9,7 +10,7 @@ function App() {
             <NavTop />
             <Banner />
             <Category />
-            <div className="awww">aa</div>
+            <List />
         </div>
     );
 }

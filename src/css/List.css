@@ -1,0 +1,8 @@
+.awww {
+    background-color: orange;
+    width: 70%;
+    min-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto 0px auto;
+}
