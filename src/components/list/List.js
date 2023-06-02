@@ -9,9 +9,7 @@ function List() {
         return state.selectResultList.resultList;
     });
 
-    useEffect(() => {
-        console.log("aa");
-    }, [selectResult]);
+    useEffect(() => {}, [selectResult]);
 
     return (
         <div className="awww">
