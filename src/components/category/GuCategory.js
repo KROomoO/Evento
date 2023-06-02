@@ -22,7 +22,7 @@ function GuCategory({ gulist }) {
     // ToDoList : 데이터 redux state에 저장까지 진행했음 이제 하단에 리스트 만들고(월별 선택 selectbox) 데이터 뿌려주기 진행 ㄱㄱ
     useEffect(() => {
         if (selectResultList && selectResultList.length !== 0) {
-            console.log(selectResultList);
+            // console.log(selectResultList);
         }
         // else {
         //     // 강서구 무료 행사 없음 이것도 리스트에 결과 없다고 따로 처리 해줘야함(월별 선택 시 해당 월 and 지역구 or 무료 행사가 없을 경우와 동일하게)
