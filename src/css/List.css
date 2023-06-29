@@ -1,8 +1,11 @@
-.awww {
+.list_container {
     background-color: orange;
     width: 70%;
     min-width: 1000px;
+    margin: 30px auto 0px auto;
+}
+
+.wrapper_pagination {
     display: flex;
-    flex-direction: column;
-    margin: 60px auto 0px auto;
+    justify-content: center;
 }
