@@ -6,39 +6,49 @@ import Stack from "@mui/material/Stack";
 import "css/List.css";
 
 import ListItem from "./ListItem";
+import Axios from "axios";
 
 function List() {
     const [pagelength, setPagelength] = useState(0);
     const [selectPage, setSelectPage] = useState(1);
-    const [pageResult, setPageResult] = useState([]);
-    const [countPage, setCountPage] = useState();
     const [isLoading, setIsLoading] = useState(false);
+    const [resultLength, setResultLength] = useState(0);
 
-    const selectResult = useSelector(
-        (state) => state.selectResultList.resultList
+    const selectedListGuname = useSelector(
+        (state) => state.selectedList.guname
     );
 
-    // ToDoList : 선택된 page 값을 이용해서 selectResult값 중 해당하는 페이지에 보여질 데이터 정렬
+    const selectedListFree = useSelector((state) => state.selectedList.free);
 
     useEffect(() => {
-        if (selectResult && selectResult.length > 0) {
-            setPagelength(Math.ceil(selectResult.length / 20));
-            setPageResult(selectResult.slice(0, 20));
+        Axios.get("/api/list/guname/length", {
+            params: {
+                selectGuname: selectedListGuname,
+                checkedFree: selectedListFree,
+            },
+        }).then((response) => {
+            setResultLength(response.data[0].listLength);
+            return response.data[0].listLength;
+        });
+    }, [selectedListGuname, selectedListFree]);
+
+    useEffect(() => {
+        if (resultLength > 0) {
+            setPagelength(Math.ceil(resultLength / 10));
             setSelectPage(1);
-            setCountPage(20);
             setIsLoading(true);
         }
-    }, [selectResult]);
+    }, [resultLength]);
 
-    useEffect(() => {
-        if (selectPage === 1) {
-            setPageResult(selectResult.slice(0, 20));
-            setCountPage(20);
-        } else {
-            setPageResult(selectResult.slice(countPage, selectPage * 20));
-            setCountPage(selectPage * 20);
-        }
-    }, [selectPage]);
+    // useEffect(() => {
+    //     if (selectPage === 1) {
+    //         setPageResult(selectResult.slice(0, 20));
+    //         setCountPage(20);
+    //     } else {
+    //         setPageResult(selectResult.slice(countPage, selectPage * 20));
+    //         setCountPage(selectPage * 20);
+    //     }
+    // }, [selectPage]);
 
     return (
         <div className="list_container">
@@ -55,8 +65,14 @@ function List() {
                                 onChange={(event, page) => setSelectPage(page)}
                             />
                         </Stack>
-                        {pageResult.length !== 0 && (
-                            <ListItem pageResult={pageResult} />
+                        {resultLength !== 0 && (
+                            <ListItem
+                                listdata={{
+                                    guname: selectedListGuname,
+                                    free: selectedListFree,
+                                    selectedPage: selectPage * 10 - 10,
+                                }}
+                            />
                         )}
                     </div>
                 ) : null}

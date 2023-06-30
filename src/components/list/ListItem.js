@@ -1,16 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Axios from "axios";
 
-function ListItem({ pageResult }) {
+function ListItem({ listdata }) {
+    const [resultList, setResultList] = useState();
+
     useEffect(() => {
-        // console.log("aa");
-    }, []);
+        Axios.get("/api/list/guname/list", {
+            params: {
+                selectGuname: listdata.guname,
+                checkedFree: listdata.free,
+                selectedPage: listdata.selectedPage,
+            },
+        }).then((response) => setResultList(response.data));
+    }, [listdata]);
+
+    useEffect(() => {
+        console.log(resultList);
+    }, [resultList]);
+
     return (
         <div>
-            {pageResult &&
-                pageResult.map((item) => {
-                    return <p key={item.id}>{item.id}</p>;
+            {resultList &&
+                resultList.map((item, index) => {
+                    return <p>{item.id}</p>;
                 })}
-            {console.log("bb")}
         </div>
     );
 }
