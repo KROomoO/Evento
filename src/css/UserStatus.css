@@ -1,0 +1,62 @@
+.login_button,
+.logout_button {
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.login_button:hover,
+.logout_button:hover {
+    scale: 1.1;
+}
+
+.logout_button {
+    margin-right: 10px;
+}
+
+.social_login_container {
+    width: 450px;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper_social_login {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper_social_login > button {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper_social_login > button > img {
+    width: 50px;
+    height: 50px;
+}
+
+.wrapper_social_login > span {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.on_success_login_container {
+    display: flex;
+}

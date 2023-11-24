@@ -19,42 +19,39 @@ function List() {
     );
 
     const selectedListFree = useSelector((state) => state.selectedList.free);
+    const selectedMonth = useSelector((state) => state.selectedList.month);
 
     useEffect(() => {
-        Axios.get("/api/list/guname/length", {
+        Axios.get("/api/listlength", {
             params: {
                 selectGuname: selectedListGuname,
                 checkedFree: selectedListFree,
+                selectedMonth: selectedMonth,
             },
         }).then((response) => {
             setResultLength(response.data[0].listLength);
             return response.data[0].listLength;
         });
-    }, [selectedListGuname, selectedListFree]);
+    }, [selectedListGuname, selectedListFree, selectedMonth]);
 
     useEffect(() => {
         if (resultLength > 0) {
             setPagelength(Math.ceil(resultLength / 10));
             setSelectPage(1);
             setIsLoading(true);
+        } else {
+            setIsLoading(false);
         }
     }, [resultLength]);
 
-    // useEffect(() => {
-    //     if (selectPage === 1) {
-    //         setPageResult(selectResult.slice(0, 20));
-    //         setCountPage(20);
-    //     } else {
-    //         setPageResult(selectResult.slice(countPage, selectPage * 20));
-    //         setCountPage(selectPage * 20);
-    //     }
-    // }, [selectPage]);
-
     return (
         <div className="list_container">
-            <div className="wrapper_pagination">
-                {isLoading ? (
-                    <div>
+            {isLoading ? (
+                <>
+                    {resultLength !== 0 && (
+                        <ListItem selectedPage={selectPage * 10 - 10} />
+                    )}
+                    <div className="wrapper_pagination">
                         <Stack spacing={2}>
                             <Pagination
                                 count={pagelength}
@@ -65,18 +62,17 @@ function List() {
                                 onChange={(event, page) => setSelectPage(page)}
                             />
                         </Stack>
-                        {resultLength !== 0 && (
-                            <ListItem
-                                listdata={{
-                                    guname: selectedListGuname,
-                                    free: selectedListFree,
-                                    selectedPage: selectPage * 10 - 10,
-                                }}
-                            />
-                        )}
                     </div>
-                ) : null}
-            </div>
+                </>
+            ) : (
+                <div className="empty_container">
+                    <img
+                        src={process.env.PUBLIC_URL + "/img/empty.png"}
+                        alt="empty"
+                    />
+                    <p>검색된 이벤트가 없습니다. 다시 검색해주세요.</p>
+                </div>
+            )}
         </div>
     );
 }

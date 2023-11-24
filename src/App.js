@@ -1,17 +1,32 @@
 import "./css/App.css";
-import Banner from "components/common/banner/Banner";
-import NavTop from "components/common/header/NavTop";
-import Category from "components/category/Category";
-import List from "components/list/List";
+
+import Main from "routes/Main";
+import Detail from "routes/Detail";
+
+import { NavermapsProvider } from "react-naver-maps";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NaverRedirect from "routes/NaverRedirect";
+import KakaoRedirect from "routes/KakaoRedirect";
+import GoogleRedirect from "routes/GoogleRedirect";
+import MyScrap from "routes/MyScrap";
 
 function App() {
     return (
-        <div className="App">
-            <NavTop />
-            <Banner />
-            <Category />
-            <List />
-        </div>
+        <NavermapsProvider
+            ncpClientId={process.env.REACT_APP_NAVER_MAP_CLIENT_ID}
+        >
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/detail/:itemId" element={<Detail />} />
+                    <Route path="/myscrap" element={<MyScrap />} />
+                    <Route path="/authnaver" element={<NaverRedirect />} />
+                    <Route path="/authkakao" element={<KakaoRedirect />} />
+                    <Route path="/authgoogle" element={<GoogleRedirect />} />
+                </Routes>
+            </BrowserRouter>
+        </NavermapsProvider>
     );
 }
 

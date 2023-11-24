@@ -1,10 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import selectListSlice from "./reducer/selectListSlice";
-import selectResultListSlice from "./reducer/selectResultListSlice";
+import userInfoSlice from "./reducer/userInfoSlice";
 
 const reducer = combineReducers({
-    selectResultList: selectResultListSlice.reducer,
     selectedList: selectListSlice.reducer,
+    userInfo: userInfoSlice.reducer,
 });
 
 const store = configureStore({ reducer });

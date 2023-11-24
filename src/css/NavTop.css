@@ -38,16 +38,3 @@
     align-items: flex-end;
     justify-content: right;
 }
-
-.wrapper_login > a {
-    padding: 10px;
-    margin-right: 20px;
-    text-decoration: none;
-}
-
-.wrapper_login > a > strong {
-    font-size: 1.2rem;
-    font-weight: bolder;
-    color: black;
-    letter-spacing: 1px;
-}

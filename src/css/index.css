@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Tilt+Neon&display=swap");
+
 html,
 body,
 div,
@@ -130,4 +132,5 @@ table {
 
 * {
     box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
 }
