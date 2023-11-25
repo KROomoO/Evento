@@ -59,7 +59,6 @@ const UserStatus = () => {
 
     useEffect(() => {
         if (userId !== undefined) {
-            console.log(userId);
             dispatch(setUser_id(userId));
             setIsLogin(true);
         } else {
