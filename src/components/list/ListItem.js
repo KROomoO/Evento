@@ -4,6 +4,8 @@ import Axios from "axios";
 import { Link } from "react-router-dom";
 import replaceErrorImg from "js/replaceErrorImg";
 
+import customAxios from "js/axiosConfig";
+
 function ListItem({ selectedPage }) {
     const [resultList, setResultList] = useState();
 
@@ -15,14 +17,24 @@ function ListItem({ selectedPage }) {
     const selectedMonth = useSelector((state) => state.selectedList.month);
 
     useEffect(() => {
-        Axios.get("/api/resultlist", {
-            params: {
-                selectGuname: selectedListGuname,
-                checkedFree: selectedListFree,
-                selectedPage: selectedPage,
-                selectedMonth: selectedMonth,
-            },
-        }).then((response) => setResultList(response.data));
+        customAxios
+            .get("/api/resultlist", {
+                params: {
+                    selectGuname: selectedListGuname,
+                    checkedFree: selectedListFree,
+                    selectedPage: selectedPage,
+                    selectedMonth: selectedMonth,
+                },
+            })
+            .then((response) => setResultList(response.data));
+        // Axios.get("/api/resultlist", {
+        //     params: {
+        //         selectGuname: selectedListGuname,
+        //         checkedFree: selectedListFree,
+        //         selectedPage: selectedPage,
+        //         selectedMonth: selectedMonth,
+        //     },
+        // }).then((response) => setResultList(response.data));
     }, [selectedListGuname, selectedListFree, selectedPage, selectedMonth]);
 
     return (

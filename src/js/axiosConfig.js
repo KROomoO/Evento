@@ -1,8 +1,7 @@
-// import Axios from "axios";
+import Axios from "axios";
 
-// const instance = Axios.create({
-//     baseURL:
-//         "",
-// });
+const customAxios = Axios.create({
+    baseURL: "http://52.79.254.175:4000",
+});
 
-// export default instance;
+export default customAxios;

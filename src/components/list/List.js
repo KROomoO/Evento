@@ -8,6 +8,8 @@ import "css/List.css";
 import ListItem from "./ListItem";
 import Axios from "axios";
 
+import customAxios from "js/axiosConfig";
+
 function List() {
     const [pagelength, setPagelength] = useState(0);
     const [selectPage, setSelectPage] = useState(1);
@@ -22,16 +24,28 @@ function List() {
     const selectedMonth = useSelector((state) => state.selectedList.month);
 
     useEffect(() => {
-        Axios.get("/api/listlength", {
-            params: {
-                selectGuname: selectedListGuname,
-                checkedFree: selectedListFree,
-                selectedMonth: selectedMonth,
-            },
-        }).then((response) => {
-            setResultLength(response.data[0].listLength);
-            return response.data[0].listLength;
-        });
+        customAxios
+            .get("/api/listlength", {
+                params: {
+                    selectGuname: selectedListGuname,
+                    checkedFree: selectedListFree,
+                    selectedMonth: selectedMonth,
+                },
+            })
+            .then((response) => {
+                setResultLength(response.data[0].listLength);
+                return response.data[0].listLength;
+            });
+        // Axios.get("/api/listlength", {
+        //     params: {
+        //         selectGuname: selectedListGuname,
+        //         checkedFree: selectedListFree,
+        //         selectedMonth: selectedMonth,
+        //     },
+        // }).then((response) => {
+        //     setResultLength(response.data[0].listLength);
+        //     return response.data[0].listLength;
+        // });
     }, [selectedListGuname, selectedListFree, selectedMonth]);
 
     useEffect(() => {
