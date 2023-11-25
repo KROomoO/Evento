@@ -10,8 +10,6 @@ import "css/List.css";
 import NavTop from "components/common/header/NavTop";
 import replaceErrorImg from "js/replaceErrorImg";
 
-import customAxios from "js/axiosConfig";
-
 const MyPage = () => {
     const [scrapList, setScrapList] = useState();
 
@@ -20,15 +18,9 @@ const MyPage = () => {
     useEffect(() => {
         const MyScrapList = async () => {
             if (userId !== "") {
-                const scrapResult = await customAxios.post(
-                    "/api/mypage/myscrap",
-                    {
-                        user_id: userId,
-                    }
-                );
-                // const scrapResult = await Axios.post("/api/mypage/myscrap", {
-                //     user_id: userId,
-                // });
+                const scrapResult = await Axios.post("/api/mypage/myscrap", {
+                    user_id: userId,
+                });
 
                 setScrapList(scrapResult.data);
             }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Axios from "axios";
+import Axios from "axios";
 import { Person } from "@mui/icons-material";
 import { Menu, MenuItem, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
@@ -9,8 +9,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import LoginDialog from "./LoginDialog";
 
 import "css/UserStatus.css";
-
-import customAxios from "js/axiosConfig";
 
 const UserStatus = () => {
     const [isLogin, setIsLogin] = useState(false);
@@ -35,8 +33,7 @@ const UserStatus = () => {
 
     useEffect(() => {
         async function checkJwt() {
-            const response = await customAxios.get("/api/login/verify_jwt");
-            // const response = await Axios.get("/api/login/verify_jwt");
+            const response = await Axios.get("/api/login/verify_jwt");
 
             if (
                 response.data.verify === false &&
@@ -71,8 +68,7 @@ const UserStatus = () => {
     }, [userId, dispatch]);
 
     const handleLogout = async () => {
-        const response = await customAxios.get("/api/login/logout");
-        // const response = await Axios.get("/api/login/logout");
+        const response = await Axios.get("/api/login/logout");
 
         if (response.data === "잘못된 접근입니다.") {
             alert(response.data);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Switch from "@mui/material/Switch";
-// import Axios from "axios";
+import Axios from "axios";
 import GuCategory from "./GuCategory";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -12,7 +12,6 @@ import {
 import "css/Category.css";
 
 import handleSelectCategory from "js/handleSelectCategory";
-import customAxios from "js/axiosConfig";
 
 function Category() {
     const dispatch = useDispatch();
@@ -22,19 +21,13 @@ function Category() {
 
     // load guname list
     useEffect(() => {
-        customAxios
-            .get("/api/guname")
-            .then((response) => setGulist(response.data))
+        Axios.get("/api/guname")
+            .then((response) => {
+                setGulist(response.data);
+            })
             .catch((err) => {
-                console.log(err);
+                console.error(err);
             });
-        // Axios.get("/api/guname")
-        //     .then((response) => {
-        //         setGulist(response.data);
-        //     })
-        //     .catch((err) => {
-        //         console.error(err);
-        //     });
     }, []);
 
     useEffect(() => {

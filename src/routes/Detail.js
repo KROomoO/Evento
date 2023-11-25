@@ -21,8 +21,6 @@ import { useSelector } from "react-redux";
 import NavTop from "components/common/header/NavTop";
 import "css/Detail.css";
 
-import customAxios from "js/axiosConfig";
-
 function MyMap({ address }) {
     const navermaps = useNavermaps();
 
@@ -63,35 +61,21 @@ function Detail() {
     const userId = useSelector((state) => state.userInfo.user_id);
 
     useEffect(() => {
-        customAxios
-            .get("/api/detail", {
-                params: {
-                    itemId: itemId,
-                },
-            })
+        Axios.get("/api/detail", {
+            params: {
+                itemId: itemId,
+            },
+        })
             .then((response) => setSelectItem(...response.data))
             .then(() => setIsLoading(true));
-        // Axios.get("/api/detail", {
-        //     params: {
-        //         itemId: itemId,
-        //     },
-        // })
-        //     .then((response) => setSelectItem(...response.data))
-        //     .then(() => setIsLoading(true));
     }, [itemId]);
 
     useEffect(() => {
         if (userId !== "") {
-            customAxios
-                .post("/api/detail/check_scrap", {
-                    user_id: userId,
-                    post_id: itemId,
-                })
-                .then((response) => setIsScrap(response.data));
-            // Axios.post("/api/detail/check_scrap", {
-            //     user_id: userId,
-            //     post_id: itemId,
-            // }).then((response) => setIsScrap(response.data));
+            Axios.post("/api/detail/check_scrap", {
+                user_id: userId,
+                post_id: itemId,
+            }).then((response) => setIsScrap(response.data));
         }
     }, [userId, itemId]);
 
@@ -105,41 +89,23 @@ function Detail() {
         if (userId !== "") {
             setIconIsLoading(true);
             if (isScrap === false) {
-                customAxios
-                    .post("/api/detail/save_scrap", {
-                        user_id: userId,
-                        post_id: itemId,
-                    })
+                Axios.post("/api/detail/save_scrap", {
+                    user_id: userId,
+                    post_id: itemId,
+                })
                     .then(() => {
                         setIsScrap(true);
                     })
                     .then(() => setIconIsLoading(false));
-                // Axios.post("/api/detail/save_scrap", {
-                //     user_id: userId,
-                //     post_id: itemId,
-                // })
-                //     .then(() => {
-                //         setIsScrap(true);
-                //     })
-                //     .then(() => setIconIsLoading(false));
             } else {
-                customAxios
-                    .post("/api/detail/delete_scrap", {
-                        user_id: userId,
-                        post_id: itemId,
-                    })
+                Axios.post("/api/detail/delete_scrap", {
+                    user_id: userId,
+                    post_id: itemId,
+                })
                     .then(() => {
                         setIsScrap(false);
                     })
                     .then(() => setIconIsLoading(false));
-                // Axios.post("/api/detail/delete_scrap", {
-                //     user_id: userId,
-                //     post_id: itemId,
-                // })
-                //     .then(() => {
-                //         setIsScrap(false);
-                //     })
-                //     .then(() => setIconIsLoading(false));
             }
         } else {
             alert("로그인 후 이용해주세요.");
