@@ -80,9 +80,9 @@ function Detail() {
     }, [userId, itemId]);
 
     const itemLinkStyle = {
-        width: 90,
+        width: 150,
         height: 20,
-        fontSize: 14,
+        fontSize: 20,
     };
 
     const handleScrapButton = async () => {

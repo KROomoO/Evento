@@ -2,7 +2,7 @@
     width: 70%;
     min-width: 1000px;
     max-width: 1320px;
-    margin: 30px auto 0px auto;
+    margin: 0px auto 0px auto;
 }
 
 .wrapper_pagination {
@@ -14,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
 .wrapper_listItem {
