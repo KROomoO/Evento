@@ -1,5 +1,3 @@
-import "./css/App.css";
-
 import Main from "routes/Main";
 import Detail from "routes/Detail";
 
