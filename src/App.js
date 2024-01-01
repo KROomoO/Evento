@@ -1,13 +1,13 @@
-import Main from "routes/Main";
-import Detail from "routes/Detail";
+import Main from "./routes/Main";
+import Detail from "./routes/Detail";
+import NaverRedirect from "./routes/NaverRedirect";
+import KakaoRedirect from "./routes/KakaoRedirect";
+import GoogleRedirect from "./routes/GoogleRedirect";
+import MyScrap from "./routes/MyScrap";
 
 import { NavermapsProvider } from "react-naver-maps";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NaverRedirect from "routes/NaverRedirect";
-import KakaoRedirect from "routes/KakaoRedirect";
-import GoogleRedirect from "routes/GoogleRedirect";
-import MyScrap from "routes/MyScrap";
 
 function App() {
     return (

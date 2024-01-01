@@ -21,16 +21,12 @@ function Category() {
 
     // load guname list
     useEffect(() => {
-        Axios.get("/api/guname")
-            .then((response) => {
-                setGulist(response.data);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-    }, []);
+        async function getGulist() {
+            const { data } = await Axios.get("/api/guname");
+            setGulist(data);
+        }
+        getGulist();
 
-    useEffect(() => {
         dispatch(selectedGuname("전체"));
         dispatch(checkedFree(0));
         //eslint-disable-next-line
@@ -86,7 +82,7 @@ function Category() {
                     </div>
                 </div>
             </div>
-            <GuCategory gulist={gulist} />
+            {gulist !== undefined && <GuCategory gulist={gulist} />}
         </>
     );
 }
