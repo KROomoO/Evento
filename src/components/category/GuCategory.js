@@ -18,13 +18,17 @@ function GuCategory({ gulist }) {
                     <li className="selected" onClick={handleClickGunameEvent}>
                         전체
                     </li>
-                    {gulist.map((item, index) => {
-                        return item.guname !== "None" ? (
-                            <li key={index} onClick={handleClickGunameEvent}>
-                                {item.guname}
-                            </li>
-                        ) : null;
-                    })}
+                    {gulist &&
+                        gulist.map((item, index) => {
+                            return item.guname !== "None" ? (
+                                <li
+                                    key={index}
+                                    onClick={handleClickGunameEvent}
+                                >
+                                    {item.guname}
+                                </li>
+                            ) : null;
+                        })}
                 </ul>
             </div>
         </div>

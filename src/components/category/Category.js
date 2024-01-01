@@ -82,7 +82,7 @@ function Category() {
                     </div>
                 </div>
             </div>
-            {gulist !== undefined && <GuCategory gulist={gulist} />}
+            <GuCategory gulist={gulist} />
         </>
     );
 }
