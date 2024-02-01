@@ -11,7 +11,7 @@
 > - 이벤트 스크랩 기능 제공
 
 ## 🔗 URL
-- [Evento](http://ec2-15-165-77-157.ap-northeast-2.compute.amazonaws.com:3000)
+- [Evento](http://ec2-3-36-93-164.ap-northeast-2.compute.amazonaws.com:3000/)
 
 ## 📌 Skill
 - JavaScript
