@@ -11,7 +11,7 @@
 > - 이벤트 스크랩 기능 제공
 
 ## 🔗 URL
-- [Evento](http://ec2-3-38-101-85.ap-northeast-2.compute.amazonaws.com/)
+- <a href="http://ec2-3-38-101-85.ap-northeast-2.compute.amazonaws.com/" target="_blank">Evento</a>
 
 ## 📌 Skill
 - JavaScript
