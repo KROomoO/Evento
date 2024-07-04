@@ -1,9 +1,9 @@
 import { Dialog, DialogTitle, DialogContent, IconButton } from "@mui/material";
 import { Close } from "@mui/icons-material";
 
-import GoogleLoginButton from "components/login/GoogleLoginButton";
-import KakaoLoginButton from "components/login/KakaoLoginButton";
-import NaverLoginButton from "components/login/NaverLoginButton";
+import GoogleLoginButton from "../../login/GoogleLoginButton";
+import KakaoLoginButton from "../../login/KakaoLoginButton";
+import NaverLoginButton from "../../login/NaverLoginButton";
 import { useState } from "react";
 
 const LoginDialog = () => {

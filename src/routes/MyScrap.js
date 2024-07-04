@@ -4,11 +4,11 @@ import Axios from "axios";
 import { Bookmark } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-import "css/MyScrap.css";
-import "css/List.css";
+import "../css/MyScrap.css";
+import "../css/List.css";
 
-import NavTop from "components/common/header/NavTop";
-import replaceErrorImg from "js/replaceErrorImg";
+import NavTop from "../components/common/header/NavTop";
+import replaceErrorImg from "../js/replaceErrorImg";
 
 const MyPage = () => {
     const [scrapList, setScrapList] = useState();

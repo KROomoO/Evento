@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { selectedGuname } from "store/reducer/selectListSlice";
+import { selectedGuname } from "../../store/reducer/selectListSlice";
 
-import handleSelectCategory from "js/handleSelectCategory";
+import handleSelectCategory from "../../js/handleSelectCategory";
 
 function GuCategory({ gulist }) {
     const dispatch = useDispatch();

@@ -7,11 +7,11 @@ import {
     selectedGuname,
     checkedFree,
     selectedMonth,
-} from "store/reducer/selectListSlice";
+} from "../../store/reducer/selectListSlice";
 
-import "css/Category.css";
+import "../../css/Category.css";
 
-import handleSelectCategory from "js/handleSelectCategory";
+import handleSelectCategory from "../../js/handleSelectCategory";
 
 function Category() {
     const dispatch = useDispatch();
@@ -29,6 +29,7 @@ function Category() {
 
         dispatch(selectedGuname("전체"));
         dispatch(checkedFree(0));
+
         //eslint-disable-next-line
     }, []);
 

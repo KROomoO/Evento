@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Axios from "axios";
 import { Link } from "react-router-dom";
-import replaceErrorImg from "js/replaceErrorImg";
+import replaceErrorImg from "../../js/replaceErrorImg";
 
 function ListItem({ selectedPage }) {
     const [resultList, setResultList] = useState();

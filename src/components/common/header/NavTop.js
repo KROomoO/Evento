@@ -1,4 +1,4 @@
-import "css/NavTop.css";
+import "../../../css/NavTop.css";
 
 import UserStatus from "./UserStatus";
 

@@ -1,6 +1,6 @@
 import Carousel from "react-material-ui-carousel";
 import BannerItem from "./BannerItem";
-import "css/Banner.css";
+import "../../../css/Banner.css";
 
 function Banner() {
     const bannerDescription = [

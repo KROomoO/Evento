@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
-import "css/List.css";
+import "../../css/List.css";
 
 import ListItem from "./ListItem";
 import Axios from "axios";
@@ -29,8 +29,9 @@ function List() {
                 selectedMonth: selectedMonth,
             },
         }).then((response) => {
-            setResultLength(response.data[0].listLength);
-            return response.data[0].listLength;
+            if (!!response.data) {
+                setResultLength(response.data[0].listLength);
+            }
         });
     }, [selectedListGuname, selectedListFree, selectedMonth]);
 

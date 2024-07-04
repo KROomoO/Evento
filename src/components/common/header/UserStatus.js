@@ -3,12 +3,12 @@ import Axios from "axios";
 import { Person } from "@mui/icons-material";
 import { Menu, MenuItem, Button } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { setUser_id } from "store/reducer/userInfoSlice";
+import { setUser_id } from "../../../store/reducer/userInfoSlice";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import LoginDialog from "./LoginDialog";
 
-import "css/UserStatus.css";
+import "../../../css/UserStatus.css";
 
 const UserStatus = () => {
     const [isLogin, setIsLogin] = useState(false);

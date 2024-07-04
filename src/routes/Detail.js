@@ -1,7 +1,7 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import replaceErrorImg from "js/replaceErrorImg";
+import replaceErrorImg from "../js/replaceErrorImg";
 import { IconButton } from "@mui/material";
 import Link from "@mui/joy/Link";
 import {
@@ -18,8 +18,8 @@ import {
 } from "react-naver-maps";
 import { useSelector } from "react-redux";
 
-import NavTop from "components/common/header/NavTop";
-import "css/Detail.css";
+import NavTop from "../components/common/header/NavTop";
+import "../css/Detail.css";
 
 function MyMap({ address }) {
     const navermaps = useNavermaps();
