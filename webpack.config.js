@@ -68,8 +68,8 @@ module.exports = {
         proxy: [
             {
                 context: ["/api"],
-                target: "http://localhost:4000/",
-                // target: "http://52.79.175.221:8080/",
+                // target: "http://localhost:4000/",
+                target: "http://ec2-52-79-59-223.ap-northeast-2.compute.amazonaws.com:8080/",
                 changeOrigin: true,
                 // pathRewrite: { "^/api": "" },
             },
