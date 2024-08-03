@@ -1,23 +1,52 @@
 # 📣 Evento
+<br/>
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+## 목차
+1. 서비스 소개
+2. 기술 스택
+3. 주요 기능
+4. 프로젝트 기간
+<br/>
 
-
-## 👀 About
-서울시에서 열리는 행사, 공연, 축제를 조회할 수 있는 웹 애플리케이션입니다.
+## 💡 서비스 소개
+이벤트 조회 웹 애플리케이션
+>Evento는 서울시에서 제공하는 공공데이터를 기반으로 개발되었습니다.<br/>
+>서울시에서 열리는 행사, 공연, 축제 정보를 쉽게 조회할 수 있는 플랫폼을 제공합니다.
 - 자치구별, 월별, 유/무료 이벤트 조회
 - 이벤트 상세정보
-- 마이페이지
-> - 이벤트 스크랩 기능 제공
+- 마이페이지: 스크랩 이벤트 조회
+<br/>
 
-## 🔗 URL
-- <a href="http://ec2-3-38-101-85.ap-northeast-2.compute.amazonaws.com/" target="_blank">Evento</a>
+## 🛠️ 기술 스택
 
-## 📌 Skill
-- JavaScript
-- React
-- Node.js
-- Webpack
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+<br/>
+
+### 상세 기술스택 및 버전
+| 구분     | 기술스택             | 상세내용                | 버전     |
+|----------|---------------------|-------------------------|----------|
+| 공통     | 형상관리             | Git                     | 2.44.0   |
+| FrontEnd | JavaScript(ES6)     | -                       | -        |
+|          | React               | react                   | 18.2.0   |
+|          | React               | react-dom               | 18.2.0   |
+|          | React               | react-router-dom        | 6.16.0   |
+|          | React               | react-naver-maps        | 0.1.2    |
+|          | Axios               | axios                   | 1.4.0    |
+|          | Mui                 | mui                     | 5.12.2   |
+|          | Webpack             | module bundler          | 5.92.1   |
+|          | IDE                 | Visual Studio Code      | 1.87.2   |
+| BackEnd  | Node.js             | node.js                 | 20.13.1  |
+|          | NPM                 | npm                     | 10.5.2   |
+|          | JWT                 | jsonwebtoken            | 9.0.2    |
+|          | Google              | google-auth-library     | 9.1.0    |
+|          | Google              | googleapis              | 127.0.0  |
+|          | MyBatis             | mybatis-mapper          | 0.6.8    |
+|          | MySQL               | mysql                   | 2.18.1   |
+| DB       | MySQL               | MySQL                   | 8.0.32   |
+| Server   | AWS EC2             | Ubuntu                  | 24.04 LTS|
+|          |                     | Nginx                   | 0.8.5    |
+|          |                     | pm2                     | -        |
+
 - GoogleCloud
 > - Google OAuth2
 - Naver
@@ -25,12 +54,42 @@
 > - Naver OAuth
 - Kakao
 > - Kakao OAuth
-- AWS
-> - EC2
-> - RDS
+<br/>
 
 ### 데이터베이스 정보 제공 출처
 - [서울열린데이터광장](https://data.seoul.go.kr/dataList/OA-15486/S/1/datasetView.do)
+<br/>
 
-### PREVIEW
-![preview](https://github.com/KROomoO/ToonVerse/assets/93576045/2fe8a97d-563b-4b34-aa71-c845786d14e4)
+## 🖥️ 주요기능
+
+### 로그인
+- Google, Naver, KakaoTalk 각각의 소셜 계정을 이용하여 회원가입 및 로그인을 할 수 있습니다.
+<br/>
+
+![Login]()
+<br/>
+
+### 마이페이지 - 스크랩
+- 스크랩한 이벤트 목록을 조회할 수 있습니다.
+<br/>
+
+![SCRAP]()
+<br/>
+
+### 메인페이지
+- 각 자치구별, 월별, 유/무료 여부에 따른 이벤트 정보 목록을 조회할 수 있습니다.
+
+![MAIN]()
+<br/>
+
+### 상세페이지
+- 이벤트 정보를 상세하게 조회할 수 있습니다.
+<br/>
+
+![DETAIL]()
+<br/>
+
+## 📆 프로젝트 기간
+### 23.04.18 ~ 23.11.02
+- 프로젝트 구현 : 23.04.18 ~ 23.11.02
+</br>
