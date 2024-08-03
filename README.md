@@ -66,27 +66,27 @@
 - Google, Naver, KakaoTalk 각각의 소셜 계정을 이용하여 회원가입 및 로그인을 할 수 있습니다.
 <br/>
 
-![Login]()
+![Login](https://github.com/user-attachments/assets/43336a98-8037-4aa5-9a8a-2329374363db)
 <br/>
 
 ### 마이페이지 - 스크랩
 - 스크랩한 이벤트 목록을 조회할 수 있습니다.
 <br/>
 
-![SCRAP]()
+![SCRAP](https://github.com/user-attachments/assets/cfd8977d-324a-461f-8b03-e9f2e511b720)
 <br/>
 
 ### 메인페이지
 - 각 자치구별, 월별, 유/무료 여부에 따른 이벤트 정보 목록을 조회할 수 있습니다.
 
-![MAIN]()
+![MAIN](https://github.com/user-attachments/assets/14e020d8-ef64-4a19-bb47-d39561fd142c)
 <br/>
 
 ### 상세페이지
 - 이벤트 정보를 상세하게 조회할 수 있습니다.
 <br/>
 
-![DETAIL]()
+![DETAIL](https://github.com/user-attachments/assets/d3693738-ca13-47ee-b14f-e887397a1b55)
 <br/>
 
 ## 📆 프로젝트 기간
