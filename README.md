@@ -90,6 +90,11 @@
 ![DETAIL](https://github.com/user-attachments/assets/d3693738-ca13-47ee-b14f-e887397a1b55)
 <br/>
 
+### 시연 영상
+- 클릭 시 이동합니다!
+
+[![Evneto1](https://github.com/user-attachments/assets/0b2e0603-b9a8-4ec9-b648-8aa1f083ab27)](https://youtu.be/54uM2fqwv3s)
+
 ## 📆 프로젝트 기간
 ### 23.04.18 ~ 23.11.02
 - 프로젝트 구현 : 23.04.18 ~ 23.11.02
