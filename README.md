@@ -5,7 +5,8 @@
 1. 서비스 소개
 2. 기술 스택
 3. 주요 기능
-4. 프로젝트 기간
+4. 시연 영상
+5. 프로젝트 기간
 <br/>
 
 ## 💡 서비스 소개
@@ -90,7 +91,7 @@
 ![DETAIL](https://github.com/user-attachments/assets/d3693738-ca13-47ee-b14f-e887397a1b55)
 <br/>
 
-### 시연 영상
+## 📺 시연 영상
 - 클릭 시 이동합니다!
 
 [![Evneto1](https://github.com/user-attachments/assets/0b2e0603-b9a8-4ec9-b648-8aa1f083ab27)](https://youtu.be/54uM2fqwv3s)
