@@ -4,7 +4,7 @@
 ## 📋 목차
 1. [시연 영상](#-시연-영상)
 2. [프로젝트 소개](#-어떤-서비스인가요)
-3. [기술 스택 및 버전](#-기술-스택)
+3. [기술 스택 및 버전](#기술-스택)
 4. [주요 기능](#-프로젝트-주요기능)
 
 ## 📺 시연 영상
@@ -31,7 +31,7 @@
 
 웹 개발자로서 사람들이 유용한 정보를 쉽게 접근할 수 있도록, Evento 서비스를 만들게 되었습니다.
 
-## 기술 스택
+## 🛠 기술 스택
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 <br/>
