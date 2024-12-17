@@ -66,7 +66,7 @@
 |          | Social              | Kakao OAuth             | -        |
 |          | Map                 | Naver Map API           | -        |
 
-## 🖥️ 프로젝트 주요기능
+## 💻 프로젝트 주요기능
 
 ### 메인페이지
 ![MAIN](https://github.com/user-attachments/assets/14e020d8-ef64-4a19-bb47-d39561fd142c)
