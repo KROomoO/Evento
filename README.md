@@ -14,7 +14,7 @@
 [![Evneto](https://github.com/user-attachments/assets/0b2e0603-b9a8-4ec9-b648-8aa1f083ab27)](https://youtu.be/54uM2fqwv3s)
 </br>
 
-## 프로젝트 개요
+## 📄 프로젝트 개요
 ### ✅ 어떤 서비스인가요?
 #### 📌 서울시 통합 이벤트 조회 웹 애플리케이션
 서울시에서 열리는 행사, 공연, 축제 정보를 쉽게 조회할 수 있는 웹 애플리케이션입니다.
