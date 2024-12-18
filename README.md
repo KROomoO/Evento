@@ -62,8 +62,8 @@
 |          | MySQL               | mysql                   | 2.18.1   |
 | DB       | MySQL               | MySQL                   | 8.0.32   |
 | Server   | AWS EC2             | Ubuntu                  | 24.04 LTS|
-|          |                     | Nginx                   | 0.8.5    |
-|          |                     | pm2                     | -        |
+|          | Deploy              | Nginx                   | 0.8.5    |
+|          | Deploy              | pm2                     | -        |
 | API      | Social              | Google OAuth2           | -        |
 |          | Social              | Naver OAuth             | -        |
 |          | Social              | Kakao OAuth             | -        |
